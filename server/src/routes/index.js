@@ -5,6 +5,8 @@ import generationRoutes from './generation.routes.js';
 import shareRoutes from './share.routes.js';
 
 const router = Router();
+
+router.get('/health', (req, res) => res.json({ status: 'ok' }));
 router.use('/auth', authRoutes);
 router.use('/projects', projectRoutes);
 router.use('/generate', generationRoutes);
